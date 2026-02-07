@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let stories = [];
     let isTypingGlobal = false;
     let typeQueue = [];
+    /** @type {'library' | 'story'} — only show full menu when 'library' and on boot or explicit list */
+    let engineState = 'library';
 
     // Initialization
     if (startBtn) startBtn.addEventListener('click', initEngine);
@@ -52,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function loadLibrary() {
         try {
+            engineState = 'library';
             const response = await fetch('data/library.json');
             if (!response.ok) throw new Error('Failed to load library data.');
             stories = await response.json();
@@ -130,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const selection = stories.find(s => s.selection === cmd);
         if (selection) {
+            engineState = 'story';
             await typeLineTerminal("[SYSTEM] ACCESSING DATA_STREAM...", 20);
             await delay(300);
             printToTerminal("Loading " + selection.title + "...");
@@ -422,13 +426,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function returnToTerminal() {
         engineViewport.classList.add('hidden');
         mainInterface.classList.remove('hidden');
+        engineState = 'library';
+        if (terminalOutput) {
+            printToTerminal("--------------------------------");
+            printToTerminal("Back in library. Type 'list' for menu, a number to open a story, or 'exit' to quit.");
+        }
         if (terminalInput) terminalInput.focus();
-        listStories();
     }
 
     function shutdownEngine() {
         engineViewport.classList.add('hidden');
         mainInterface.classList.add('hidden');
+        engineState = 'library';
         if (startScreen) startScreen.classList.remove('hidden');
         if (terminalOutput) terminalOutput.innerHTML = '';
         if (terminalInput) terminalInput.value = '';
