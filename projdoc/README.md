@@ -133,3 +133,10 @@ The core JavaScript logic that powers the experience:
 
 ### Summary
 StoryEngine effectively runs a custom content browser inside the web browser. To add a new story, you simply create a new JSON file and add an entry to `library.json`. No new HTML pages are required.
+
+📈 Project Status
+🚧 underconstruction: currently under development.
+
+Proprietary - All Rights Reserved. Contact Tech-JCorp for licensing.
+
+"In contested environments, data integrity is mission-critical."
