@@ -268,8 +268,8 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('../assets/manuel.jpg') no-repeat center center;
-    background-size: cover;
+    background: url('../assets/vintage_paper.png') repeat-y center;
+    background-size: 100% auto;
     color: #39FF14;
     z-index: 9999;
     display: flex;
