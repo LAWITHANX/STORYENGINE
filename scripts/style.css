@@ -304,6 +304,16 @@ body {
     letter-spacing: -0.5px;
 }
 
+.manual-content .manual-date {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #444;
+    margin-top: -8px;
+    margin-bottom: 16px;
+    font-style: italic;
+}
+
 .manual-content h3 {
     color: #222;
     font-weight: 900;
