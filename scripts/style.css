@@ -20,7 +20,7 @@
 }
 
 body {
-    background: var(--bg-color) url('../assets/jungle.png') no-repeat center center fixed;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(15, 15, 15, 0.6)), url('../assets/jungle.png') no-repeat center center fixed;
     background-size: cover;
     color: var(--text-color);
     margin: 0;
@@ -1386,6 +1386,11 @@ h6,
     font-family: var(--font-header);
     font-size: 0.55rem;
     color: #e0d0b0;
+    background: #4A5D23;
+    /* Solid military yellow-green */
+    padding: 2px 6px;
+    border: 1px solid #111;
+    border-radius: 3px;
     text-transform: uppercase;
     text-shadow: 1px 1px 1px #000;
     letter-spacing: 1px;
