@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@font-face {
+  font-family: 'Prestige Elite';
+  src: url('../assets/PrestigeEliteStd-Bd.otf');
+}
+
 
 :root {
     --bg-color: #2a2520;
     --text-color: #d4c8b0;
     --accent-color: #39FF14;
-    --font-header: "Courier Prime", monospace;
-    --font-body: "Courier Prime", monospace;
+    --font-header: 'Prestige Elite', monospace;
+    --font-body: 'Prestige Elite', monospace;
 }
 
 /* Ensure full‑width on mobile */
@@ -299,13 +303,13 @@ body {
     font-weight: 900;
     font-size: 1.5rem;
     margin: 0 0 12px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--font-body);
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
     letter-spacing: -0.5px;
 }
 
 .manual-content .manual-date {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--font-body);
     font-size: 0.9rem;
     font-weight: bold;
     color: #444;
@@ -319,7 +323,7 @@ body {
     font-weight: 900;
     font-size: 1.1rem;
     margin: 12px 0 8px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--font-body);
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
 }
 
@@ -329,7 +333,7 @@ body {
     font-size: 0.95rem;
     line-height: 1.6;
     margin: 6px 0;
-    font-family: Georgia, serif;
+    font-family: var(--font-body);
 }
 
 .manual-content strong {
@@ -354,7 +358,7 @@ body {
     font-size: 0.85rem;
     margin: 4px 0;
     line-height: 1.5;
-    font-family: Georgia, serif;
+    font-family: var(--font-body);
 }
 
 .manual-content code {
@@ -363,7 +367,7 @@ body {
     font-weight: bold;
     padding: 2px 6px;
     border-radius: 3px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--font-body);
     border: 1px solid #b0a898;
 }
 
@@ -375,7 +379,7 @@ body {
     background: transparent;
     border: 1.5px solid #000;
     color: #000;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--font-body);
     font-size: 0.9rem;
     font-weight: 900;
     cursor: pointer;
@@ -1086,13 +1090,13 @@ h6,
 }
 
 .courier-prime-regular-italic {
-    font-family: "Courier Prime", monospace;
+    font-family: var(--font-body);
     font-weight: 400;
     font-style: italic;
 }
 
 .courier-prime-bold-italic {
-    font-family: "Courier Prime", monospace;
+    font-family: var(--font-body);
     font-weight: 700;
     font-style: italic;
 }
